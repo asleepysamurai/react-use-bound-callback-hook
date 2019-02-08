@@ -29,4 +29,4 @@ function useBoundCallback(callback, bindArgs = [], boundThis = null) {
     return newBoundMethod;
 };
 
-export default useBoundCallback;
+export { useBoundCallback };

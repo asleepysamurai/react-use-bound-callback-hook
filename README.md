@@ -9,9 +9,21 @@ A useBoundCallback hook for React. Similar to useCallback but binds the argument
 4. If they differ, rebinds and returns rebound callback.
 5. Else returns previously bound callback.
 
+### Installation
+
+```bash
+yarn add react-use-bound-callback-hook
+```
+
+```bash
+npm install react-use-bound-callback-hook
+```
+
 ### Usage:
 
 ```js
+import { useBoundCallback } from 'react-use-bound-callback-hook';
+
 function onChange(setText, ev) {
     setText(ev.currentValue.text);
 };
@@ -30,4 +42,3 @@ function SomeComponent(props) {
 - `arguments` - The arguments to be bound to the callback function
 - `context` - The context to execute the callback function as i.e. the value of `this` inside the callback. Optional. Default `null`.
 
-**Important** This hook relies on `Map` and ES6 features such as destructuring, and default arguments. It does not come with an ES5 ready transpilation out of the box. It is assumed that you will be doing this as part of your application build.
