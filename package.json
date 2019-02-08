@@ -1,0 +1,12 @@
+{
+  "name": "react-use-bound-callback-hook",
+  "version": "0.0.1",
+  "description": "A useBoundCallback hook for React. Similar to useCallback but binds the arguments instead of relying on closures.",
+  "main": "index.js",
+  "repository": "git@github.com:asleepysamurai/react-use-bound-callback-hook.git",
+  "author": "Balaganesh Damodaran <asleepysamurai@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.8.1"
+  }
+}
