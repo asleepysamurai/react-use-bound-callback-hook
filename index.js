@@ -19,8 +19,9 @@ function useBoundCallback(callback, bindArgs = [], boundThis = null) {
     const { boundMethod, args: previousBindArgs = [] } = (boundMethodsRef.current.get(callback) || {});
 
     const changedBoundArgs = previousBindArgs.filter((prevArg, i) => bindArgs[i] !== prevArg);
+    const isBoundArgsChanged = changedBoundArgs.length > 0 || bindArgs.length !== previousBindArgs.length;
 
-    if (!changedBoundArgs.length && boundMethod)
+    if (!isBoundArgsChanged && boundMethod)
         return boundMethod;
 
     const newBoundMethod = callback.bind(...bindArgs);
